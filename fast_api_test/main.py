@@ -1,9 +1,11 @@
 from fastapi import Query, FastAPI
 from typing import List
 from config import responses_products, tags_metadata
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 from models import Job
+from .utils.get_jobs_from_104 import get_jobs
 import logging
-from jobs_web_crawler_104 import get_job
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s.%(msecs)03d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
                     datefmt='%d-%b-%y %H:%M:%S')
@@ -18,7 +20,7 @@ app = FastAPI(
 
 @app.get(
     "/api/jobs/",
-    summary="get products by ids passed by str splited by comma",
+    summary="get jobs list from 104 by keywords",
     responses=responses_products,
     response_model=List[Job],
     tags=["Job Finder"]
@@ -26,7 +28,9 @@ app = FastAPI(
 async def root(
     keywords: str = Query("python"),
 ):
-    return {"message": "Hello World"}
+    res = get_jobs(keywords=keywords)
+    json_compatible_item_data = jsonable_encoder(res)
+    return JSONResponse(content=json_compatible_item_data)
 
 
 @app.get("/hello/{name}")
