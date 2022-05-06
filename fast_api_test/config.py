@@ -1,27 +1,30 @@
-from models import sample1, sample2
-
-blank_img_url = "https://tholiday.thsrc.com.tw/agts_thw/img/list_img_blank.jpg"
+from models import (
+    sample1_104, 
+    sample2_104,
+    sample1_1111,
+    sample2_1111,
+)
 
 tags_metadata = [
     {
-        "name": "Job Finder",
-        "description": "爬取要找的工作",
+        "name": "Job Finder From 104",
+        "description": "從104人力銀行爬取要找的工作",
         "externalDocs": {
             "description": "104人力銀行",
             "url": "https://www.104.com.tw/jobs/main/"
         }
     },
     {
-        "name": "",
-        "description": "456",
+        "name": "Job Finder From 1111",
+        "description": "從1111人力銀行爬取要找的工作",
         "externalDocs": {
-            "description": "104人力銀行",
-            "url": "https://www.104.com.tw/jobs/main/"
+            "description": "1111人力銀行",
+            "url": "https://www.1111.com.tw/"
         }
     }
 ]
 
-responses_products = {
+responses_104 = {
     "204": {
         "content": {
             "application/json": {
@@ -41,11 +44,43 @@ responses_products = {
                 "examples": {
                     "normal": {
                         "summary": "normal example",
-                        "value": [sample1, sample2],
+                        "value": [sample1_104, sample2_104],
                     },
                     "id doesn't exist": {
-                        "summary": "sample1 id can't find on thsrcholiday website",
-                        "value": [{}, sample2],
+                        "summary": "sample1_104 id can't find on thsrcholiday website",
+                        "value": [{}, sample2_104],
+                    }
+                },
+            },
+        },
+    },
+}
+
+responses_1111 = {
+    "204": {
+        "content": {
+            "application/json": {
+                "example": [{}, {}],
+                "schema": {
+                    "title": "empty list",
+                    "type": "array",
+                },
+            },
+        },
+        "description": "Item not found",
+    },
+    "200": {
+        "description": "Successful Response",
+        "content": {
+            "application/json": {
+                "examples": {
+                    "normal": {
+                        "summary": "normal example",
+                        "value": [sample1_1111, sample2_1111],
+                    },
+                    "id doesn't exist": {
+                        "summary": "sample1_104 id can't find on thsrcholiday website",
+                        "value": [{}, sample2_1111],
                     }
                 },
             },

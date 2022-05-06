@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from ..models import Job
 import re
 
+
 def get_jobs(keywords="python"):
     res = []
     link = f"https://www.1111.com.tw/search/job?ks={keywords}"
