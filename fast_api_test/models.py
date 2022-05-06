@@ -1,7 +1,4 @@
-from typing import List, Dict
 from pydantic import BaseModel, Field, AnyUrl
-from datetime import date
-
 
 class Job(BaseModel):
     date: str = Field(title="更新日期")
