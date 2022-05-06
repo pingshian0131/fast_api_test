@@ -1,0 +1,9 @@
+uvicorn
+fastapi
+requests
+aiohttp
+asyncio
+beautifulsoup4
+pydantic
+selenium
+webdriver_manager
