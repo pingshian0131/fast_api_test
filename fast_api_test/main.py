@@ -8,8 +8,10 @@ from config import (
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from models import Job
-from .utils.get_jobs_from_104 import get_jobs
-from .utils.get_jobs_from_1111 import get_jobs
+from .utils.get_jobs import (
+    get_jobs_from_104,
+    get_jobs_from_1111,
+)
 import logging
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s.%(msecs)03d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
@@ -36,7 +38,7 @@ app = FastAPI(
 async def query_104(
     keywords: str = Query("python"),
 ):
-    res = get_jobs(keywords=keywords)
+    res = get_jobs_from_104(keywords=keywords)
     json_compatible_item_data = jsonable_encoder(res)
     return JSONResponse(content=json_compatible_item_data)
 
@@ -51,6 +53,6 @@ async def query_104(
 async def query_1111(
     keywords: str = Query("python"),
 ):
-    res = get_jobs(keywords=keywords)
+    res = get_jobs_from_1111(keywords=keywords)
     json_compatible_item_data = jsonable_encoder(res)
     return JSONResponse(content=json_compatible_item_data)
