@@ -31,9 +31,9 @@ app = FastAPI(
     summary="get jobs list from 104 by keywords",
     responses=responses_104,
     response_model=List[Job],
-    tags=["Job Finder From 104"]
+    tags=["Find Jobs From 104"]
 )
-async def root(
+async def query_104(
     keywords: str = Query("python"),
 ):
     res = get_jobs(keywords=keywords)
@@ -46,10 +46,10 @@ async def root(
     summary="get jobs list from 1111 by keywords",
     responses=responses_1111,
     response_model=List[Job],
-    tags=["Job Finder From 1111"]
+    tags=["Find Jobs From 1111"]
 )
-async def root(
-        keywords: str = Query("python"),
+async def query_1111(
+    keywords: str = Query("python"),
 ):
     res = get_jobs(keywords=keywords)
     json_compatible_item_data = jsonable_encoder(res)
