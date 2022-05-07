@@ -1,6 +1,12 @@
 # FastAPI Demo
 <hr>
 
+* [FastAPI DOC](https://fastapi.tiangolo.com/ "FastAPI DOC")<br>
+
+* [Requests](https://docs.python-requests.org/en/latest/ "Requests")<br>
+
+* [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
+
 * combine web_crawler and FastAPI <br>
 
 * web_crawler use `requests` and `BeautifulSoup` on 104人力銀行、1111人力銀行 website.<br>
