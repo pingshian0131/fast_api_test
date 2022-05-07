@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from ..models import Job
+from models import Job
 import re
 
 

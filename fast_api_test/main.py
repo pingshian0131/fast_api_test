@@ -8,7 +8,7 @@ from config import (
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from models import Job
-from .utils.get_jobs import (
+from utils import (
     get_jobs_from_104,
     get_jobs_from_1111,
 )
