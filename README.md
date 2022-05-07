@@ -2,9 +2,9 @@
 <hr>
 
 * Documentation: <br>
-> * [FastAPI Documentation](https://fastapi.tiangolo.com/ "FastAPI Documentation")<br>
-> * [Requests Documentation](https://docs.python-requests.org/en/latest/ "Requests Documentation")<br>
-> * [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
+> [FastAPI Documentation](https://fastapi.tiangolo.com/ "FastAPI Documentation")<br>
+> [Requests Documentation](https://docs.python-requests.org/en/latest/ "Requests Documentation")<br>
+> [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
 
 * Intro
 > * combine web_crawler and FastAPI <br>
@@ -28,18 +28,18 @@
 # detail
 
 * title and category <br>
-[Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/ "Metadata and Docs URLs")<br>
-[Configuring Swagger UI - Change the Theme](https://fastapi.tiangolo.com/advanced/extending-openapi/#change-the-theme "Configuring Swagger UI - Change the Theme")<br>
+> [Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/ "Metadata and Docs URLs")<br>
+> [Configuring Swagger UI - Change the Theme](https://fastapi.tiangolo.com/advanced/extending-openapi/#change-the-theme "Configuring Swagger UI - Change the Theme")<br>
 ![](https://github.com/pingshian0131/fast_api_test/raw/main/static/title&category.png)
 
 
 * variables
   * set the api's header data: <br>
-[Response Model](https://fastapi.tiangolo.com/tutorial/response-model/ "Response Model")<br>
-[Summary and description](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#summary-and-description "Summary and description")<br>
-[Create metadata for tags](https://fastapi.tiangolo.com/tutorial/metadata/#create-metadata-for-tags "Create metadata for tags")<br>
-[Additional Response with model](https://fastapi.tiangolo.com/advanced/additional-responses/#additional-response-with-model "Additional Response with model")<br>
-[Additional media types for the main response](https://fastapi.tiangolo.com/advanced/additional-responses/#additional-media-types-for-the-main-response "Additional media types for the main response")<br>
+> [Response Model](https://fastapi.tiangolo.com/tutorial/response-model/ "Response Model")<br>
+> [Summary and description](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#summary-and-description "Summary and description")<br>
+> [Create metadata for tags](https://fastapi.tiangolo.com/tutorial/metadata/#create-metadata-for-tags "Create metadata for tags")<br>
+> [Additional Response with model](https://fastapi.tiangolo.com/advanced/additional-responses/#additional-response-with-model "Additional Response with model")<br>
+> [Additional media types for the main response](https://fastapi.tiangolo.com/advanced/additional-responses/#additional-media-types-for-the-main-response "Additional media types for the main response")<br>
 ```
 @app.get(
     "/api/jobs/104/",
@@ -53,8 +53,8 @@
 # can add other http status_code if you want
 ```
   * params input: <br>
-[Query Parameters](https://fastapi.tiangolo.com/tutorial/query-params/ "Query Parameters")<br>
-[Additional validation](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/ "Additional validation")<br>
+> [Query Parameters](https://fastapi.tiangolo.com/tutorial/query-params/ "Query Parameters")<br>
+> [Additional validation](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/ "Additional validation")<br>
 ```
 async def root(
     keywords: str = Query("python", max_length=10),
@@ -62,7 +62,7 @@ async def root(
 # url will be http://127.0.0.1:8001/api/jobs/104/?keywords=python
 ```
   * return value validation: <br>
-[Body - Fields](https://fastapi.tiangolo.com/tutorial/body-fields/ "Body - Fields")<br>
+> [Body - Fields](https://fastapi.tiangolo.com/tutorial/body-fields/ "Body - Fields")<br>
 ```
 # same as FinMind, use pydantic
 # models.py
@@ -80,8 +80,8 @@ class Job(BaseModel):
     tags: str = Field(title="其他標籤")
 ```
   * return value: <br>
-[JSON Compatible Encoder](https://fastapi.tiangolo.com/tutorial/encoder/ "JSON Compatible Encoder")<br>
-[Return a Response Directly](https://fastapi.tiangolo.com/advanced/response-directly/ "Return a Response Directly")<br>
+> [JSON Compatible Encoder](https://fastapi.tiangolo.com/tutorial/encoder/ "JSON Compatible Encoder")<br>
+> [Return a Response Directly](https://fastapi.tiangolo.com/advanced/response-directly/ "Return a Response Directly")<br>
 ```
 async def query_1111(
     keywords: str = Query("python", max_length=10),
