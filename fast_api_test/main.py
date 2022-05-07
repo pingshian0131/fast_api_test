@@ -31,6 +31,7 @@ app = FastAPI(
 @app.get(
     "/api/jobs/104/",
     summary="get jobs list from 104 by keywords",
+    description="從104人力銀行爬取要找的工作",
     responses=responses_104,
     response_model=List[Job],
     tags=["Find Jobs From 104"]
@@ -46,12 +47,13 @@ async def query_104(
 @app.get(
     "/api/jobs/1111/",
     summary="get jobs list from 1111 by keywords",
+    description="從1111人力銀行爬取要找的工作",
     responses=responses_1111,
     response_model=List[Job],
     tags=["Find Jobs From 1111"]
 )
 async def query_1111(
-    keywords: str = Query("python"),
+    keywords: str = Query("python", max_length=10),
 ):
     res = get_jobs_from_1111(keywords=keywords)
     json_compatible_item_data = jsonable_encoder(res)

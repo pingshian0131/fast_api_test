@@ -37,6 +37,7 @@
 @app.get(
     "/api/jobs/104/",
     summary="get jobs list from 104 by keywords",
+    description="從104人力銀行爬取要找的工作",
     responses=responses_104,
     response_model=List[Job],
     tags=["Job Finder From 104"]
@@ -46,9 +47,10 @@
 ```
   * params input: <br>
 [Query Parameters](https://fastapi.tiangolo.com/tutorial/query-params/ "Query Parameters")<br>
+[Additional validation](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/ "Additional validation")<br>
 ```
 async def root(
-    keywords: str = Query("python"),
+    keywords: str = Query("python", max_length=10),
 ):
 # url will be http://127.0.0.1:8001/api/jobs/104/?keywords=python
 ```
