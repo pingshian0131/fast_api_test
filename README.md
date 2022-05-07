@@ -1,17 +1,15 @@
 # FastAPI Demo
 <hr>
 
-* [FastAPI DOC](https://fastapi.tiangolo.com/ "FastAPI DOC")<br>
+* Documentation: <br>
+> * [FastAPI Documentation](https://fastapi.tiangolo.com/ "FastAPI Documentation")<br>
+> * [Requests Documentation](https://docs.python-requests.org/en/latest/ "Requests Documentation")<br>
+> * [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
 
-* [Requests](https://docs.python-requests.org/en/latest/ "Requests")<br>
-
-* [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
-
-* combine web_crawler and FastAPI <br>
-
-* web_crawler use `requests` and `BeautifulSoup` on 104人力銀行、1111人力銀行 website.<br>
-
-* FastAPI variables explanation <br>
+* Intro
+> * combine web_crawler and FastAPI <br>
+> * web_crawler use `requests` and `BeautifulSoup` on 104人力銀行、1111人力銀行 website.<br>
+> * FastAPI variables explanation <br>
 
 <hr>
 
@@ -31,6 +29,7 @@
 
 * title and category <br>
 [Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/ "Metadata and Docs URLs")<br>
+[Configuring Swagger UI - Change the Theme](https://fastapi.tiangolo.com/advanced/extending-openapi/#change-the-theme "Configuring Swagger UI - Change the Theme")<br>
 ![](https://github.com/pingshian0131/fast_api_test/raw/main/static/title&category.png)
 
 
