@@ -38,6 +38,8 @@
 [Response Model](https://fastapi.tiangolo.com/tutorial/response-model/ "Response Model")<br>
 [Summary and description](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#summary-and-description "Summary and description")<br>
 [Create metadata for tags](https://fastapi.tiangolo.com/tutorial/metadata/#create-metadata-for-tags "Create metadata for tags")<br>
+[Additional Response with model](https://fastapi.tiangolo.com/advanced/additional-responses/#additional-response-with-model "Additional Response with model")<br>
+[Additional media types for the main response](https://fastapi.tiangolo.com/advanced/additional-responses/#additional-media-types-for-the-main-response "Additional media types for the main response")<br>
 ```
 @app.get(
     "/api/jobs/104/",
