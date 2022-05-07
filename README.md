@@ -1,22 +1,20 @@
 # FastAPI Demo
 <hr>
 
-* [FastAPI DOC](https://fastapi.tiangolo.com/ "FastAPI DOC")<br>
+* Documentation: <br>
+> * [FastAPI Documentation](https://fastapi.tiangolo.com/ "FastAPI Documentation")<br>
+> * [Requests Documentation](https://docs.python-requests.org/en/latest/ "Requests Documentation")<br>
+> * [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
 
-* [Requests](https://docs.python-requests.org/en/latest/ "Requests")<br>
-
-* [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "Beautiful Soup Documentation")<br>
-
-* combine web_crawler and FastAPI <br>
-
-* web_crawler use `requests` and `BeautifulSoup` on 104人力銀行、1111人力銀行 website.<br>
-
-* FastAPI variables explanation <br>
+* Intro
+> * combine web_crawler and FastAPI <br>
+> * web_crawler use `requests` and `BeautifulSoup` on 104人力銀行、1111人力銀行 website.<br>
+> * FastAPI variables explanation <br>
 
 <hr>
 
 # Start
-`uvicorn main:app --reload --port 8001`
+`python -m uvicorn main.py:app --reload --port 8001`
 
 * FastAPI 預設的 port 是 8000，因為跟 Django 衝到才改成 8001，平時不用加 --port 的參數
 
