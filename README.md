@@ -14,7 +14,7 @@
 <hr>
 
 # Start
-`python -m uvicorn main.py:app --reload --port 8001`
+`uvicorn main:app --reload --port 8001`
 
 * FastAPI 預設的 port 是 8000，因為跟 Django 衝到才改成 8001，平時不用加 --port 的參數
 
