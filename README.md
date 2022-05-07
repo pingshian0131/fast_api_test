@@ -29,6 +29,7 @@
 
 * title and category <br>
 [Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/ "Metadata and Docs URLs")<br>
+[Configuring Swagger UI - Change the Theme](https://fastapi.tiangolo.com/advanced/extending-openapi/#change-the-theme "Configuring Swagger UI - Change the Theme")<br>
 ![](https://github.com/pingshian0131/fast_api_test/raw/main/static/title&category.png)
 
 
