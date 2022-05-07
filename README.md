@@ -81,4 +81,11 @@ class Job(BaseModel):
   * return value: <br>
 [JSON Compatible Encoder](https://fastapi.tiangolo.com/tutorial/encoder/ "JSON Compatible Encoder")<br>
 [Return a Response Directly](https://fastapi.tiangolo.com/advanced/response-directly/ "Return a Response Directly")<br>
-
+```
+async def query_1111(
+    keywords: str = Query("python", max_length=10),
+):
+    res = get_jobs_from_1111(keywords=keywords)
+    json_compatible_item_data = jsonable_encoder(res)
+    return JSONResponse(content=json_compatible_item_data)
+```
